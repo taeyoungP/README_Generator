@@ -15,7 +15,19 @@ const questions = [
     'Please input contribution guidelines for this project: ',
     'Please input test instructions for this project: ',
     'Please choose license used for this project: ',
+    'Please input your GitHub username: ',
+    'Please input your email address: ',
 ];
+
+// Function for validating email address
+// Referenced from: https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
+const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -47,6 +59,13 @@ function init() {
                 type: 'input',
                 name: 'description',
                 message: questions[1],
+                validate: function (input){
+                    if(input.length < 1){
+                        console.log("Please input your project description");
+                        return false;
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
@@ -77,9 +96,27 @@ function init() {
                 'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1',
                 'Mozilla Public License 2.0', 'The Unlicense'],
             },
+            {
+                type: 'input',
+                name: 'github',
+                message: questions[7],
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: questions[8],
+                validate: function(email){
+                    if(validateEmail(email)){
+                        return true;
+                    }
+                    console.log("Please input valid email address");
+                    return false;
+                }
+            },
+
         ])
     .then((data) => {
-        const fileName = `README.md`;
+        const fileName = `generated_README.md`;
  
         writeToFile(fileName, data);
     });

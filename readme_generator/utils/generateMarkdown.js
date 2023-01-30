@@ -81,6 +81,15 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
+  ## Table of Contents
+   * [Description](#description)
+   * [Installation Instruction](#installation-instruction)
+   * [Usage Information](#usage-information)
+   * [Contribution Guidelines](#contribution-guidelines)
+   * [Test Instruction](#test-instruction)
+   * [License](#license)
+   * [Questions](#questions)
+
   ## Description
   ${data.description}
   
@@ -96,7 +105,7 @@ function generateMarkdown(data) {
   ${data.contribution_guide}
   
   ## Test Instruction
-  Following shows the test instruction:
+  How to run the test:
   ${ins1}
   ${data.test_ins}
   ${ins2}
@@ -104,6 +113,11 @@ function generateMarkdown(data) {
   ## License
   ${data.license}
   ${license}
+
+  ## Questions?
+  If you have any questions about this project, please email to ${data.email}.
+
+  GitHub: https://github.com/${data.github}
 
   ---
 `;
