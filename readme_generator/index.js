@@ -17,6 +17,7 @@ const questions = [
     'Please choose license used for this project: ',
     'Please input your GitHub username: ',
     'Please input your email address: ',
+    'Please input credits for your collaborators or third-party assets/tutorials you used for this project : ',
 ];
 
 // Function for validating email address
@@ -112,6 +113,11 @@ function init() {
                     console.log("Please input valid email address");
                     return false;
                 }
+            },
+            {
+                type: 'input',
+                name: 'credits',
+                message: questions[9],
             },
 
         ])

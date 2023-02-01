@@ -88,20 +88,21 @@ function generateMarkdown(data) {
    * [Contribution Guidelines](#contribution-guidelines)
    * [Test Instruction](#test-instruction)
    * [License](#license)
+   * [Credits](#credits)
    * [Questions](#questions)
 
   ## Description
   ${data.description}
   
-  ## Installation Instruction
+  ## Installation
   ${ins1}
   ${data.installation}
   ${ins2}
 
-  ## Usage Information
+  ## Usage
   ${data.usage}
   
-  ## Contribution Guidelines
+  ## How to Contribute
   ${data.contribution_guide}
   
   ## Test Instruction
@@ -110,6 +111,9 @@ function generateMarkdown(data) {
   ${data.test_ins}
   ${ins2}
   
+  ## Credits
+  ${data.credits}
+
   ## License
   ${data.license}
   ${license}
