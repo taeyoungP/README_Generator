@@ -59,7 +59,7 @@ After answering all of the questions, readme file will be generated with name 'g
 
 
 ## How to Use
-The application will be invoked by using the following command:
+The application will be invoked by using the following command (inside of readme_generator folder):
 
 ```bash
 node index.js
