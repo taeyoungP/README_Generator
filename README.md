@@ -37,19 +37,20 @@ THEN I am taken to the corresponding section of the README
 ## Description 
 The following video demonstrates the application functionality: 
 
-[Test Video](https://drive.google.com/file/d/1NZqPElyt8qKsPsS-AdmoZbTsZBpRzh2X/view)
+* [Link to Video demonstration](https://drive.google.com/file/d/1NZqPElyt8qKsPsS-AdmoZbTsZBpRzh2X/view)
+
 
 ![Example run of node index.js](./readme_generator/img/example.png)
 
 When the user run th application with command, bash terminal will come up wtih questions needed for generating README file. It will asks user to enter Project Title, Description for the project. User must enter title and descripton in order to create README, otherwise, application will keep askinng user to input them. Then app will ask user for installation instruction(ex: npm install), usage information, contribution guidelines, and test instructions(ex: node index.js). (These can be left empty if not applicable.)
 
-App will also ask user for what license is used for the project. If user did not use any license, they can choose 'The Unlicense'. Otherwise, all other chosen license will be lncluded in README file with license badge and its link.
+App will also ask user for what license is used for the project. If user did not use any license, they can choose 'The Unlicense'. All other chosen license will be lncluded in README file with license badge and its link.
 
 ![License Badge](./readme_generator/img/license_badge.png)
 
-Then it asks user to input their GitHub username and email address. For entering GitHub username, user doese not need to add @.
+Then it asks user to input their GitHub username and email address to create Questions section. (User doese not need to add @ for their GitHub username).
 
-Finally, app asks user to inpuot credits for project collaborators or third-party assets or other tutorials they have used for the project. 
+Finally, app asks user to input credits for project collaborators or third-party assets or other tutorials they have used for the project. 
 
 After answering all of the questions, readme file will be generated with name 'generated_README.md'.
 
@@ -66,7 +67,7 @@ node index.js
 
 After running the app with the command, it will prompt the user to provide inputs for generating README file. 
 
-User must provide project title, project description, license used for the project (choose The Unlicense if no license was used), GitHub username, and email address. Other inputs are optional, but it is recommended user to input someting for each section for quality README file. If not applicable, please leave blank('') for installation instruction and test instructions, and input 'N/A' for other sections.
+User must provide project title, project description, license used for the project (choose The Unlicense if no license was used), GitHub username, and email address. Other inputs are optional, but it is recommended user to input something for each section for quality README file. If not applicable, please leave blank('') for installation instruction and test instructions, and input 'N/A' for other sections.
 
 README file is also generated with Table of contents and user will be able to jump to corresponding content by clicking the list from the Table of contents.
 
