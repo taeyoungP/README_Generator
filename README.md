@@ -34,7 +34,28 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-## Description
+## Description 
+The following video demonstrates the application functionality: 
+
+[Test Video](https://drive.google.com/file/d/1NZqPElyt8qKsPsS-AdmoZbTsZBpRzh2X/view)
+
+![Example run of node index.js](./readme_generator/img/example.png)
+
+When the user run th application with command, bash terminal will come up wtih questions needed for generating README file. It will asks user to enter Project Title, Description for the project. User must enter title and descripton in order to create README, otherwise, application will keep askinng user to input them. Then app will ask user for installation instruction(ex: npm install), usage information, contribution guidelines, and test instructions(ex: node index.js). (These can be left empty if not applicable.)
+
+App will also ask user for what license is used for the project. If user did not use any license, they can choose 'The Unlicense'. Otherwise, all other chosen license will be lncluded in README file with license badge and its link.
+
+![License Badge](./readme_generator/img/license_badge.png)
+
+Then it asks user to input their GitHub username and email address. For entering GitHub username, user doese not need to add @.
+
+Finally, app asks user to inpuot credits for project collaborators or third-party assets or other tutorials they have used for the project. 
+
+After answering all of the questions, readme file will be generated with name 'generated_README.md'.
+
+
+(Example generated_READEME.md is lncluded in readme_generator directory.)
+
 
 ## How to Use
 The application will be invoked by using the following command:
@@ -43,6 +64,12 @@ The application will be invoked by using the following command:
 node index.js
 ```
 
+After running the app with the command, it will prompt the user to provide inputs for generating README file. 
+
+User must provide project title, project description, license used for the project (choose The Unlicense if no license was used), GitHub username, and email address. Other inputs are optional, but it is recommended user to input someting for each section for quality README file. If not applicable, please leave blank('') for installation instruction and test instructions, and input 'N/A' for other sections.
+
+README file is also generated with Table of contents and user will be able to jump to corresponding content by clicking the list from the Table of contents.
+
 ## Credits
 
  * npm [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4) 
@@ -50,80 +77,6 @@ node index.js
  * Code for validating email address: https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
 
  * License badges and links: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba, https://gist.github.com/kofiav/c1059e1075b67582e86b07aa9759e20d
-
-
-## Getting Started
-
-Here are some guidelines to help you get started:
-
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
-
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
-
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
-
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
-
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer/v/8.2.4).
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to walkthrough video.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* A walkthrough video demonstrating the functionality of the application.
-
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
 
 ---
 

@@ -1,10 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-
-/*['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause "Simplified" License', 
-'BSD 3-Clause "New" or "Revised" License', 'Boost Software License 1.0', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0',
-'GNU Affero General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1',
-'Mozilla Public License 2.0', 'The Unlicense']*/
 function renderLicenseBadge(license) {
   if(license === 'Apache License 2.0'){
     return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
@@ -34,20 +29,20 @@ function renderLicenseBadge(license) {
   
 }
 
-// TODO: Create a function that returns the license link
+// function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license === 'Apache License 2.0'){
+  if(license === 'Apache License 2.0'){ //Apcache 2.0
     return '(https://opensource.org/licenses/Apache-2.0)';
   } else if(license === 'GNU General Public License v3.0'){ //GNU GPL v3
     return '(https://www.gnu.org/licenses/gpl-3.0)';
-  } else if(license === 'MIT License'){
+  } else if(license === 'MIT License'){ //MIT 
     return '(https://opensource.org/licenses/MIT)';
-  } else if(license === 'BSD 2-Clause "Simplified" License'){
+  } else if(license === 'BSD 2-Clause "Simplified" License'){ //BSD 2
     return '(https://opensource.org/licenses/BSD-2-Clause)';
-  } else if(license === 'BSD 3-Clause "New" or "Revised" License'){
+  } else if(license === 'BSD 3-Clause "New" or "Revised" License'){ //BSD 3
     return '(https://opensource.org/licenses/BSD-3-Clause)';
-  } else if(license === 'Eclipse Public License 1.0'){
+  } else if(license === 'Eclipse Public License 1.0'){ //Eclipse Public 1.0
     return '(https://opensource.org/licenses/EPL-1.0)';
   } else if(license === 'GNU Affero General Public License v3.0'){ //GNU AGPL v3
     return '(https://www.gnu.org/licenses/agpl-3.0)';
@@ -55,7 +50,7 @@ function renderLicenseLink(license) {
     return '(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)';
   } else if(license === 'GNU Lesser General Public License v3.0'){ //GNU LGPL v3
     return '(https://www.gnu.org/licenses/lgpl-3.0)';
-  } else if(license === 'Mozilla Public License 2.0'){
+  } else if(license === 'Mozilla Public License 2.0'){ //Mozilla Public 2.0
     return '(https://opensource.org/licenses/MPL-2.0)';
   } else if(license === 'The Unlicense'){ //Unlicense, return no link but empty string
     return '';
@@ -64,18 +59,18 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
+// function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseLink = renderLicenseLink(license);
-  let licenseBadge = renderLicenseBadge(license);
+  let licenseLink = renderLicenseLink(license); //license link
+  let licenseBadge = renderLicenseBadge(license); //license badge
   return licenseBadge+licenseLink;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  let license = renderLicenseSection(data.license);
-  let ins1 = '```md';
+  let license = renderLicenseSection(data.license); //license 
+  let ins1 = '```bash';
   let ins2 = '```';
 
   return `
@@ -83,12 +78,12 @@ function generateMarkdown(data) {
 
   ## Table of Contents
    * [Description](#description)
-   * [Installation Instruction](#installation-instruction)
-   * [Usage Information](#usage-information)
-   * [Contribution Guidelines](#contribution-guidelines)
+   * [Installation Instruction](#installation)
+   * [Usage](#usage)
+   * [Contribution Guidelines](#how-to-contribute)
    * [Test Instruction](#test-instruction)
-   * [License](#license)
    * [Credits](#credits)
+   * [License](#license)
    * [Questions](#questions)
 
   ## Description

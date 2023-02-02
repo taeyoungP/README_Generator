@@ -1,10 +1,10 @@
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Array of questions for user input
 // description, installation instructions, usage information, 
 // contribution guidelines, and test instructions
 const questions = [
@@ -30,7 +30,7 @@ const validateEmail = (email) => {
       );
   };
 
-// TODO: Create a function to write README file
+// function to write README file
 function writeToFile(fileName, data) {
     //Content for README
     const readme = generateMarkdown.generateMarkdown(data);
@@ -40,7 +40,7 @@ function writeToFile(fileName, data) {
     );
 }
 
-// TODO: Create a function to initialize app
+// function to initialize app
 function init() {
     inquirer
         .prompt([
@@ -101,6 +101,13 @@ function init() {
                 type: 'input',
                 name: 'github',
                 message: questions[7],
+                validate: function (input){
+                    if(input.length < 1){
+                        console.log("Please input your GitHub username");
+                        return false;
+                    }
+                    return true;
+                }
             },
             {
                 type: 'input',
